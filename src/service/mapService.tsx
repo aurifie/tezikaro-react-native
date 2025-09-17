@@ -5,7 +5,7 @@ import { updateUserLocation } from "./authService";
 export const reverseGeocode = async (latitude: number, longitude: number, setUser: any) => {
     try {
         const response = await axios.get(
-            `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${"AIzaSyBqR8ck9A02QRP7RIIJ1daV93XNRUDt-Mk"}`
+            `https://maps.googleapis.com/maps/api/geocode/json?latlng=${latitude},${longitude}&key=${GOOGLE_MAP_API}`
         )
 
         if (response.data.status == 'OK') {
